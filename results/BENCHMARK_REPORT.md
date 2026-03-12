@@ -129,7 +129,10 @@ Local WhisperX has essentially no truncation issues.
 
 ## Dataset Information
 
-- **Source:** Aalto Finnish Parliament ASR Corpus 2008-2020, v2
+- **Source:** Aalto Finnish Parliament ASR Corpus 2008-2020, v2 (fi-parliament-asr-v2)
+- **Download:** [Kielipankki](https://www.kielipankki.fi/download/fi-parliament-asr/fi-parliament-asr-v2/) (devtest.zip, 1.4 GB)
+- **Corpus info:** [Kielipankki corpus page](https://www.kielipankki.fi/corpora/fi-parliament-asr/)
+- **License:** CLARIN PUB +BY +PRIV +ND +OTHER
 - **Audio:** 16kHz mono WAV, 16-bit
 - **Transcriptions:** Hand-corrected .trn files (ground truth)
 - **Splits tested:** 2016-dev (seen/unseen), 2016-test (seen/unseen), 2020-test
