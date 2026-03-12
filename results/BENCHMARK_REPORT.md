@@ -5,6 +5,9 @@
 **Azure Endpoint:** haagahelia-poc-gaik.openai.azure.com
 **Local WhisperX:** AI Hub (myedge-unique-label.swedencentral.cloudapp.azure.com:8080)
 
+- `language="fi"` uses **Finnish-NLP/whisper-large-finnish-v3** (Finnish fine-tuned)
+- `language="auto"` uses **whisper-large-v3** (general multilingual)
+
 ## Summary
 
 This benchmark compares three transcription backends on Finnish parliament speech data:
@@ -17,7 +20,7 @@ Each was tested with two language settings: `language="fi"` (explicit Finnish) v
 2. **Local WhisperX is a close second** at 11.79% WER — nearly matching GPT-4o at zero API cost
 3. **Local WhisperX with `auto` has the best CER** at 5.07% — best character-level accuracy of all models
 4. **Setting `language="fi"` matters significantly for GPT-4o** (-2.36% WER improvement)
-5. **Setting `language="fi"` has small/negligible effect on Whisper models** (Azure: -0.03%, Local: -0.55% WER)
+5. **Setting `language="fi"` has negligible effect on Azure Whisper** (-0.03% WER). For local WhisperX, `fi` vs `auto` actually switches between two different models (see note below)
 6. **Local WhisperX is 8x faster than Azure Whisper** (~2.3s vs ~20s) and free to run
 7. **GPT-4o occasionally truncates output** (0.8-2.6% of files), worse with auto-detect
 
@@ -69,12 +72,17 @@ Each was tested with two language settings: `language="fi"` (explicit Finnish) v
 | Model | WER% (fi) | WER% (auto) | Delta | CER% (fi) | CER% (auto) | Delta | Impact |
 | ----- | --------- | ----------- | ----- | --------- | ----------- | ----- | ------ |
 | gpt-4o-transcribe | 11.51 | 13.87 | **-2.36** | 6.52 | 8.73 | **-2.21** | Significant improvement with fi |
-| local whisperX | 11.79 | 12.34 | -0.55 | 5.75 | 5.07 | +0.68 | Small WER gain, but auto has better CER |
+| local whisperX | 11.79 | 12.34 | -0.55 | 5.75 | 5.07 | +0.68 | Different models* — fi has better WER, auto has better CER |
 | azure whisper | 15.50 | 15.53 | -0.03 | 6.93 | 6.95 | -0.02 | No meaningful difference |
 
+> *\*Important: On the AI Hub server, `language="fi"` and `language="auto"` use **different underlying models**:
+> `fi` → Finnish-NLP/whisper-large-finnish-v3 (fine-tuned), `auto` → whisper-large-v3 (general).
+> So the local WhisperX fi/auto comparison is a **model comparison**, not just a parameter change.
+> Azure GPT-4o and Azure Whisper use the same model with both settings.*
+
 **Conclusion:** For GPT-4o-transcribe, always set `language="fi"` when transcribing Finnish.
-For Whisper-based models (Azure and local), the language setting has little practical effect on WER.
-Interestingly, local WhisperX with `auto` achieves the best CER of any model tested (5.07%).
+For Azure Whisper, the language setting has no practical effect on Finnish parliament speech.
+For local WhisperX, the Finnish fine-tuned model (fi) gives better WER, while the general model (auto) gives better CER.
 
 ## Speed Comparison
 
