@@ -1,0 +1,3 @@
+config,backend,language,n_samples,n_errors,wer_pct,cer_pct,avg_latency_sec,avg_rtf
+local_whisper_fi,local_whisper,fi,250,0,11.79,5.75,2.234,0.2802
+local_whisper_auto,local_whisper,auto,250,0,12.34,5.07,2.384,0.3632

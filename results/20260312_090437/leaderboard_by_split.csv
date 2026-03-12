@@ -1,11 +1,7 @@
 config,split,backend,language,n_samples,n_errors,wer_pct,cer_pct,avg_latency_sec,avg_rtf
-azure_gpt4o_transcribe_fi,2016-dev-seen,azure_gpt4o,fi,100,0,14.05,8.54,0.98,0.1163
-azure_gpt4o_transcribe_auto,2016-dev-seen,azure_gpt4o,auto,100,0,16.29,10.85,0.997,0.1269
-azure_gpt4o_transcribe_fi,2016-dev-unseen,azure_gpt4o,fi,100,0,14.53,8.24,0.983,0.1123
-azure_gpt4o_transcribe_auto,2016-dev-unseen,azure_gpt4o,auto,100,0,15.88,9.66,0.94,0.1103
-azure_gpt4o_transcribe_fi,2016-test-seen,azure_gpt4o,fi,100,0,10.02,5.55,0.946,0.1236
-azure_gpt4o_transcribe_auto,2016-test-seen,azure_gpt4o,auto,100,0,10.67,6.37,0.866,0.1151
-azure_gpt4o_transcribe_fi,2016-test-unseen,azure_gpt4o,fi,100,0,7.98,4.23,0.914,0.1153
-azure_gpt4o_transcribe_auto,2016-test-unseen,azure_gpt4o,auto,100,0,11.25,7.19,1.0,0.1168
-azure_gpt4o_transcribe_fi,2020-test,azure_gpt4o,fi,100,0,9.49,5.15,0.813,0.139
-azure_gpt4o_transcribe_auto,2020-test,azure_gpt4o,auto,100,0,10.78,5.48,0.797,0.1385
+azure_whisper_fi,2016-dev-seen,azure_whisper,fi,50,0,16.79,7.78,19.235,2.4618
+azure_whisper_auto,2016-dev-seen,azure_whisper,auto,50,0,16.79,7.78,20.373,2.3708
+azure_whisper_fi,2016-dev-unseen,azure_whisper,fi,50,0,17.07,7.41,19.237,3.0258
+azure_whisper_auto,2016-dev-unseen,azure_whisper,auto,50,0,17.18,7.49,20.443,2.732
+azure_whisper_fi,2016-test-seen,azure_whisper,fi,50,0,12.59,5.52,20.408,3.8043
+azure_whisper_auto,2016-test-seen,azure_whisper,auto,50,0,12.59,5.52,19.345,3.0482

@@ -1,0 +1,11 @@
+config,split,backend,language,n_samples,n_errors,wer_pct,cer_pct,avg_latency_sec,avg_rtf
+local_whisper_fi,2016-dev-seen,local_whisper,fi,50,0,13.23,6.4,2.489,0.2552
+local_whisper_auto,2016-dev-seen,local_whisper,auto,50,0,13.23,5.52,2.543,0.2645
+local_whisper_fi,2016-dev-unseen,local_whisper,fi,50,0,13.75,5.98,2.292,0.2615
+local_whisper_auto,2016-dev-unseen,local_whisper,auto,50,0,14.08,5.84,2.522,0.2928
+local_whisper_fi,2016-test-seen,local_whisper,fi,50,0,11.67,6.25,2.407,0.2767
+local_whisper_auto,2016-test-seen,local_whisper,auto,50,0,12.69,5.0,2.832,0.6936
+local_whisper_fi,2016-test-unseen,local_whisper,fi,50,0,8.87,5.02,2.382,0.3563
+local_whisper_auto,2016-test-unseen,local_whisper,auto,50,0,9.48,4.19,2.362,0.301
+local_whisper_fi,2020-test,local_whisper,fi,50,0,11.11,4.49,1.599,0.2513
+local_whisper_auto,2020-test,local_whisper,auto,50,0,12.2,4.6,1.66,0.2641

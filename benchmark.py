@@ -232,7 +232,7 @@ def run_benchmark(
     local_api_base: str | None,
     local_api_key: str | None,
 ):
-    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    run_id = datetime.now().strftime("%Y%m%d_%H%M%S_%f")[:20]
     run_dir = output_dir / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
 

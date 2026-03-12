@@ -1,0 +1,3 @@
+config,backend,language,n_samples,n_errors,wer_pct,cer_pct,avg_latency_sec,avg_rtf
+azure_gpt4o_transcribe_fi,azure_gpt4o,fi,500,0,11.51,6.52,0.959,0.1272
+azure_gpt4o_transcribe_auto,azure_gpt4o,auto,500,0,13.87,8.73,0.965,0.1324
