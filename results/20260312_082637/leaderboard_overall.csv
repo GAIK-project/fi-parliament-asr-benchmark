@@ -1,0 +1,5 @@
+config,backend,language,n_samples,n_errors,wer_pct,cer_pct,avg_latency_sec,avg_rtf
+azure_whisper_fi,azure_whisper,fi,30,0,17.68,8.55,20.094,2.4338
+azure_whisper_auto,azure_whisper,auto,30,0,17.68,8.55,19.994,3.6201
+azure_gpt4o_transcribe_fi,azure_gpt4o,fi,30,0,18.55,11.74,1.064,0.1331
+azure_gpt4o_transcribe_auto,azure_gpt4o,auto,30,0,25.36,19.68,0.943,0.1027

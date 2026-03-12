@@ -1,0 +1,131 @@
+{
+  "run_id": "20260312_082637",
+  "timestamp": "2026-03-12T08:48:18.344636",
+  "dataset_dir": "fi-parliament-asr",
+  "splits": [
+    "2016-dev-seen"
+  ],
+  "limit": 30,
+  "seed": 42,
+  "delay": 0.3,
+  "configs": [
+    {
+      "name": "azure_whisper_fi",
+      "backend": "azure_whisper",
+      "language": "fi"
+    },
+    {
+      "name": "azure_whisper_auto",
+      "backend": "azure_whisper",
+      "language": "auto"
+    },
+    {
+      "name": "azure_gpt4o_transcribe_fi",
+      "backend": "azure_gpt4o",
+      "language": "fi"
+    },
+    {
+      "name": "azure_gpt4o_transcribe_auto",
+      "backend": "azure_gpt4o",
+      "language": "auto"
+    }
+  ],
+  "leaderboard_overall": [
+    {
+      "config": "azure_whisper_fi",
+      "backend": "azure_whisper",
+      "language": "fi",
+      "n_samples": 30,
+      "n_errors": 0,
+      "wer_pct": 17.68,
+      "cer_pct": 8.55,
+      "avg_latency_sec": 20.094,
+      "avg_rtf": 2.4338
+    },
+    {
+      "config": "azure_whisper_auto",
+      "backend": "azure_whisper",
+      "language": "auto",
+      "n_samples": 30,
+      "n_errors": 0,
+      "wer_pct": 17.68,
+      "cer_pct": 8.55,
+      "avg_latency_sec": 19.994,
+      "avg_rtf": 3.6201
+    },
+    {
+      "config": "azure_gpt4o_transcribe_fi",
+      "backend": "azure_gpt4o",
+      "language": "fi",
+      "n_samples": 30,
+      "n_errors": 0,
+      "wer_pct": 18.55,
+      "cer_pct": 11.74,
+      "avg_latency_sec": 1.064,
+      "avg_rtf": 0.1331
+    },
+    {
+      "config": "azure_gpt4o_transcribe_auto",
+      "backend": "azure_gpt4o",
+      "language": "auto",
+      "n_samples": 30,
+      "n_errors": 0,
+      "wer_pct": 25.36,
+      "cer_pct": 19.68,
+      "avg_latency_sec": 0.943,
+      "avg_rtf": 0.1027
+    }
+  ],
+  "leaderboard_by_split": [
+    {
+      "config": "azure_whisper_fi",
+      "split": "2016-dev-seen",
+      "backend": "azure_whisper",
+      "language": "fi",
+      "n_samples": 30,
+      "n_errors": 0,
+      "wer_pct": 17.68,
+      "cer_pct": 8.55,
+      "avg_latency_sec": 20.094,
+      "avg_rtf": 2.4338
+    },
+    {
+      "config": "azure_whisper_auto",
+      "split": "2016-dev-seen",
+      "backend": "azure_whisper",
+      "language": "auto",
+      "n_samples": 30,
+      "n_errors": 0,
+      "wer_pct": 17.68,
+      "cer_pct": 8.55,
+      "avg_latency_sec": 19.994,
+      "avg_rtf": 3.6201
+    },
+    {
+      "config": "azure_gpt4o_transcribe_fi",
+      "split": "2016-dev-seen",
+      "backend": "azure_gpt4o",
+      "language": "fi",
+      "n_samples": 30,
+      "n_errors": 0,
+      "wer_pct": 18.55,
+      "cer_pct": 11.74,
+      "avg_latency_sec": 1.064,
+      "avg_rtf": 0.1331
+    },
+    {
+      "config": "azure_gpt4o_transcribe_auto",
+      "split": "2016-dev-seen",
+      "backend": "azure_gpt4o",
+      "language": "auto",
+      "n_samples": 30,
+      "n_errors": 0,
+      "wer_pct": 25.36,
+      "cer_pct": 19.68,
+      "avg_latency_sec": 0.943,
+      "avg_rtf": 0.1027
+    }
+  ],
+  "total_samples": 120,
+  "total_errors": 0
+}
